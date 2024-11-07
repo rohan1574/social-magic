@@ -3,7 +3,6 @@ import {
   TableBody,
   TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -55,6 +54,7 @@ const History = async () => {
           </TableBody>
         </Table>
       </div>
+      
     </div>
   );
 };

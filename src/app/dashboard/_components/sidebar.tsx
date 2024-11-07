@@ -2,9 +2,10 @@
 
 import { Logo } from "@/components/logo";
 import { cn } from "@/lib/utils";
-import { CreditCard, History, WandSparkles } from "lucide-react";
+import { Archive, CreditCard, History, Settings, WandSparkles } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 
 const menuList = [
   {
@@ -19,18 +20,29 @@ const menuList = [
   },
   {
     name: "Upgrade",
-    icon: CreditCard,
+    icon:  CreditCard ,
     path: "/dashboard/upgrade",
+  },
+  {
+    name: "overall store",
+    icon: Archive ,
+    path: "/dashboard/overall",
+  },
+  {
+    name: "Settings",
+    icon: Settings,
+    path: "/dashboard/setting",
   },
 ];
 
 export const Sidebar = () => {
   const path = usePathname();
 
-  console.log("path", path);
+  // console.log("path", path);
   return (
     <div className="p-5 bg-white h-[800px] flex flex-col">
       <Logo />
+      
       <div className="mt-10 h-max flex flex-col justify-between">
         {menuList.map((menu) => (
           <Link
@@ -46,6 +58,7 @@ export const Sidebar = () => {
           </Link>
         ))}
       </div>
+      
     </div>
   );
 };

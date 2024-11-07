@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import AIChart from "./ai-chart";
 
+
 export const AIUsage = async () => {
   const { userId } = auth();
 
